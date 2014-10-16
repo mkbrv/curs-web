@@ -14,49 +14,54 @@
         Prezentare:
         https://docs.google.com/presentation/d/1fLdbCK9UwZuZjfJcDG3h1YOg4ZmL0LogYn6NmhwNIvE/edit#slide=id.p
 
-   <link rel="stylesheet" href="css/site.css" />
-     -->
+
+     -->   <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-<header>
-    <div><img src="img/p5-logo.png"/></div>
-    <div>This is a site to search Github for interesting projects.</div>
-    <nav>
-        <ul>
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li><a href="/about.html">About</a></li>
-        </ul>
-    </nav>
-</header>
-<section>
-    <p>In this <em>sample site</em>, we'll show a list of <a href="http://github.com">Github</a> projects <span>and the data</span>
-        about <strong>those projects</strong>.</p>
+<div class="container">
+    <header>
+        <div><img class="bordered-image"  src="img/p5-logo.png"/></div>
+        <div>This is a site to search Github for interesting projects.</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="main">
+        <p>In this <em>sample site</em>, we'll show a list of <a href="http://github.com">Github</a> projects <span>and the data</span>
+            about <strong>those projects</strong>.</p>
 
-    <details>
-        https://github.com/search?l=javascript&q=ceva&type=Code
-    </details>
-    <br>
-
-    <form action="https://github.com/search" method="GET">
-        <label for="langChoice">Language:</label>
-        <select name="l" id="langChoice">
-            <option value="javscript" selected>JavaScript</option>
-            <option value="cpp">C++</option>
-            <option value="java">Java</option>
-            <option value="php">PHP</option>
-        </select><br>
-        <label for="searchPhrase">Search Phrase:</label>
+        <details>
+            https://github.com/search?l=javascript&q=ceva&type=Code
+        </details>
         <br>
-        <input required="true" name="q" id="searchPhrase"/><br/>
 
-        <input type="hidden" name="type" value="Code"/>
-        <input type="hidden" name="utf8" value="✓"/>
-        <input type="submit" value="search"/>
-    </form>
-</section>
-<footer>
-    &copy; 2014 M
-</footer>
+        <form action="https://github.com/search" method="GET" class="bordered-image simple-form">
+            <label for="langChoice">Language:</label>
+            <select name="l" id="langChoice">
+                <option value="javscript" selected>JavaScript</option>
+                <option value="cpp">C++</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+            </select><br>
+            <label for="searchPhrase">Search Phrase:</label>
+            <br>
+            <input required="true" name="q" id="searchPhrase"/><br/>
+
+            <input type="hidden" name="type" value="Code"/>
+            <input type="hidden" name="utf8" value="✓"/>
+            <input type="submit" value="search"/>
+        </form>
+        <div id="results" class="bordered-image">
+            This is where results will live...eventually.
+        </div>
+    </section>
+    <footer>
+        &copy; 2014 M
+    </footer>
+</div>
 </body>
 </html>
