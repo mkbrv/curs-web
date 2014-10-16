@@ -1,3 +1,3 @@
-<h1>Csere Miklos</h1>
+Csere Miklos
 
-<p>curs-web 2014, unitbv an II </p>
+curs-web 2014, unitbv an II
