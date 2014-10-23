@@ -6,7 +6,7 @@ body {
 .container {
     width: 500px;
     height: 500px;
-    margin: 200px auto;
+    margin: 10% auto;
     position: relative;
     overflow: hidden;
 
