@@ -152,6 +152,7 @@ h3 {
     height: auto;
     min-height: 300px;
     clear: both;
+    display:none;
 }
 
 #bottom .element, #bottom .double-element, #bottom .triple-element {
