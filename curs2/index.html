@@ -1,10 +1,99 @@
 <html>
-	<head>
-		<script type="text/javascript" src="js/jquery-2.1.1.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-	</head>
-	<body>
-	<!-- Hahahah -->	
-	</body>
+<head>
+    <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <style>
+        .my-custom-badge {
+            color: #fff;
+            background-color: #428bca;
+        }
+
+        body {
+            background: url('img/restaurant_icons.png');
+        }
+    </style>
+</head>
+<body>
+<header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse"
+                    data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="../" class="navbar-brand">Bootstrap</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../getting-started/">Getting started</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://expo.getbootstrap.com"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" id="content">
+            <h1 class="page-header">Pentalog</h1>
+
+            <p>
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+                Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet
+            </p>
+        </div>
+        <div class="col-md-4" id="sidebar">
+            <h2>Sidebar</h2>
+
+            <div class="well">
+                <h3>
+                    <span class="glyphicon glyphicon-user"></span> PHP Developer
+                    <span class="my-custom-badge badge">6</span>
+                </h3>
+
+                <p>Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor
+                    amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin
+                    dolor amet Lore ipsum sin dolor amet </p>
+            </div>
+            <div class="well">
+                <h3><span class="glyphicon glyphicon-headphones"></span> JAVA Developer <span
+                        class="my-custom-badge badge">25</span></h3>
+
+                <p>Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor
+                    amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin dolor amet Lore ipsum sin
+                    dolor amet Lore ipsum sin dolor amet </p>
+                <blockquote>
+                    <p>Best job I've ever had</p>
+                </blockquote>
+                <a class="btn btn-primary"><span class="glyphicon glyphicon-check"></span> Apply now</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
