@@ -19,3 +19,12 @@
 .minesweeper-cell:hover {
     cursor: pointer;
 }
+
+button {
+    width: 200px;
+    height: 200px;
+}
+
+#content {
+    font-size: 40px;
+}
