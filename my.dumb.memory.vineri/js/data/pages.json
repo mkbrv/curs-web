@@ -1,0 +1,20 @@
+[
+    {
+        "url": "#news",
+        "private": true,
+        "template": "news.html"
+
+    },
+    {
+        "url": "#home",
+        "private": false,
+        "template": "homepage.html"
+    },
+
+    {
+        "url": "",
+        "private": false,
+        "template": "homepage.html"
+    }
+
+]
