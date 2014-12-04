@@ -2,5 +2,5 @@ $(document).ready(function () {
 
 });
 
-var router = new ROUTER();
+var router = new ROUTER(new LOGIN());
 router.start();
