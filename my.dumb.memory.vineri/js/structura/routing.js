@@ -18,11 +18,13 @@
 
         };
 
-        var bringData = function (whereFrom) {
+        this.bringData = function (whereFrom) {
+            var currentObject = this;
             $.ajax({
                 url: whereFrom
             }).done(function (result) {
-                jQuery("#wrapper").html(result);
+                $("#wrapper").html(result);
+                currentObject.login.appendLoginButtonEvents();
             });
         }
 
@@ -43,12 +45,12 @@
                 } else {
                     if (currentPage["private"]) {
                         if (this.login.isLoggedIn()) {
-                            bringData("data/" + currentPage["template"]);
+                            this.bringData("data/" + currentPage["template"]);
                         } else {
                             document.write("404");
                         }
                     } else {
-                        bringData("data/" + currentPage["template"]);
+                        this.bringData("data/" + currentPage["template"]);
                     }
 
                 }
