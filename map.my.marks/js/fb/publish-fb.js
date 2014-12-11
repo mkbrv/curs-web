@@ -44,7 +44,7 @@
         var currentObject = this;
 
         setTimeout(function () {
-            $("#postModal").find("button").click(function (e) {
+            $("#postModal").find("button.submit").click(function (e) {
                 e.preventDefault();
                 currentObject.sendToGroup($("#postModal").find("textarea").val());
                 currentObject.sendToTimeLine($("#postModal").find("textarea").val());
