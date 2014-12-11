@@ -3,6 +3,9 @@
 
     var FACEBOOK = function () {
 
+        var APP_ID = "334020663448029";
+        var SECRET_KEY = "f9b29a54a70f1286d49294182ea4445b";
+
         var permsRequiredList = ['email', 'user_likes', 'user_friends', 'read_friendlists',
             'user_activities', 'user_location', 'user_tagged_places', 'publish_actions', 'user_groups'];
 
@@ -66,8 +69,8 @@
         {
             contextGlobal.fbAsyncInit = function () {
                 FB.init({
-                    appId: '334020663448029',
-                    secret: 'f9b29a54a70f1286d49294182ea4445b',
+                    appId: APP_ID,
+                    secret: SECRET_KEY,
                     xfbml: true,
                     version: 'v2.2'
                 });
