@@ -25,7 +25,7 @@
             message.tags = "183113748233,100000562838158,100000538116580,100000662228483";
             //this will add tagged people
             message.message += " #Pentalog #P5CursWeb";
-            message.link = "www.pentalog.ro"
+            message.link = "http://softwareengineer.ro/p5/frontend.png"
 
             FB.api(
                 url,
