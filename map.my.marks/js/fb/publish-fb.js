@@ -22,9 +22,10 @@
             }
 
             message.place = "183113748233"; // this will say @at Pentalog
-            message.tags = "183113748233,100000562838158,1251040900,100000538116580,100000662228483";
+            message.tags = "183113748233,100000562838158,100000538116580,100000662228483";
             //this will add tagged people
             message.message += " #Pentalog #P5CursWeb";
+            message.link = "www.pentalog.ro"
 
             FB.api(
                 url,
@@ -33,6 +34,8 @@
                 function (response) {
                     if (response && !response.error) {
                         console.log(message);
+                    } else {
+                        console.log(response.error);
                     }
                 }
             );
