@@ -24,6 +24,12 @@
             if (this.fbPicture.name != null) {
                 textToDisplay += this.fbPicture.name;
             }
+            if (this.fbPicture.tags != null && this.fbPicture.tags.data.length > 0) {
+                textToDisplay += " with: ";
+                for (var tagKey  in this.fbPicture.tags.data) {
+                    textToDisplay += " - " + this.fbPicture.tags.data[tagKey].name;
+                }
+            }
             if (this.fbPicture.place != null) {
                 textToDisplay += " @" + this.fbPicture.place.name;
             }
