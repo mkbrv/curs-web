@@ -50,15 +50,22 @@
 
                     google.maps.event.addListener(newMarker, 'click', function (event) {
                         var contentString = '<div id="content">' +
-                            '<div id="siteNotice">';
+                            '<div id="bodyContent">';
 
                         if (this.title !== undefined) {
                             contentString += '<h2>' + this.title + '</h2>';
                         }
 
-                        contentString += '<hr><img src="' + this.fbPicture.picture + '"/>'
-                        '</div>' +
-                        '</div>';
+                        contentString += '<hr><img src="' + this.fbPicture.picture + '"/><br>';
+
+                        if (this.fbPicture.tags != null && this.fbPicture.tags.data.length > 0) {
+                            contentString += " with: ";
+                            for (var tagKey  in this.fbPicture.tags.data) {
+                                contentString += " - " + this.fbPicture.tags.data[tagKey].name;
+                            }
+                        }
+                        contentString += '</div>' +
+                            '</div>';
                         var infowindow = new google.maps.InfoWindow({
                             content: contentString,
                             position: this.position
