@@ -73,10 +73,9 @@
                 var mapCanvas = $("#map-canvas");
                 var isShown = mapCanvas.css("display");
                 if (isShown === "none") {
-                    mapCanvas.slideDown();
-                    mapCanvas.show();
+                    mapCanvas.slideDown("slow");
                 } else {
-                    mapCanvas.fadeOut();
+                    mapCanvas.slideUp("slow");
                 }
                 e.preventDefault();
                 google.maps.event.trigger(map, 'resize');
