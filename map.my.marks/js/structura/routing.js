@@ -30,6 +30,7 @@
                 url: whereFrom
             }).done(function (result) {
                 $("#" + whereTO).html(result);
+                currentObject.addEvents();
             });
         };
 
@@ -72,6 +73,10 @@
                 }
             });
         };
+
+        this.addEvents = function () {
+
+        }
     };
 
     if (contextGlobal.ROUTER === undefined) {

@@ -7,6 +7,10 @@
 
         this.bringPhotos = function () {
             FB.api('/me/photos?accessToken=' + this.accessToken, function (responseArray) {
+                //GMAPS
+                var gMaps = new GMaps(responseArray);
+                //TIMELINE
+
                 var columns = ["#leftPanels", "#rightPanels"];
                 var index = 0;
                 console.log(responseArray);

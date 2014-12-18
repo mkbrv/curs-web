@@ -11,3 +11,8 @@
     margin: auto;
     padding: 0 15px 10px 25px;
 }
+
+#map-canvas {
+    min-height: 500px;
+    margin-bottom: 20px;
+}
