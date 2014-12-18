@@ -3,6 +3,11 @@
     height: auto;
 }
 
-.panel img {
+.panel img.head-image {
     width: 100%;
+}
+
+.panel .panel-liked {
+    margin: auto;
+    padding: 0 15px 10px 25px;
 }
