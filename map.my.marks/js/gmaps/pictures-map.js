@@ -1,8 +1,34 @@
 (function (contextGlobal) {
-
+    var firebase = new Firebase('https://boiling-torch-7924.firebaseio.com/miki');
 
     var GMaps = function (fbPicturesList) {
         this.fbPicturesList = fbPicturesList;
+
+        //push to firebase;
+        for (var pictureKey in this.fbPicturesList.data) {
+            var picture = this.fbPicturesList.data[pictureKey];
+
+            // Tests to see if /users/<userId> has any data.
+            function checkIfUserExists(picture) {
+                firebase.once('value', function (data) {
+                    var allPics = data.val();
+
+                    for (var key in allPics) {
+                        var picWr = allPics[key];
+                        if (picWr.id === picture.id) {
+                            return;
+                        }
+                    }
+                    firebase.push({ id: picture.id, data: picture});
+
+                });
+            }
+
+            checkIfUserExists(picture);
+
+            //push picture to firebase
+        }
+
 
         this.initMap = function () {
             var mapOptions = {
@@ -94,6 +120,32 @@
             });
 
         };
+
+        var currentObject = this;
+
+        //bring all from firebase
+
+        firebase.once('value', function (data) {
+
+            var allPics = data.val();
+            currentObject.fbPicturesList.data = [];
+
+            console.log(allPics);
+            var hasOne = false;
+
+            for (var key in allPics) {
+                hasOne = true;
+
+                var picWr = allPics[key];
+                currentObject.fbPicturesList.data.push(picWr.data);
+
+            }
+            if (hasOne) {
+                currentObject.initMap();
+            }
+
+        });
+
         this.initMap();
     };
 
