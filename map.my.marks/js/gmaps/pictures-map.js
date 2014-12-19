@@ -1,5 +1,7 @@
 (function (contextGlobal) {
-    var firebase = new Firebase('https://boiling-torch-7924.firebaseio.com/miki');
+   // var firebase = new Firebase('https://boiling-torch-7924.firebaseio.com/miki');
+
+    var firebase = new Firebase('https://blistering-torch-6907.firebaseio.com/miki');
 
     var GMaps = function (fbPicturesList) {
         this.fbPicturesList = fbPicturesList;
@@ -152,7 +154,7 @@
                 var allPics = data.val();
                 currentObject.fbPicturesList.data = [];
 
-                console.log(allPics);
+                //console.log(allPics);
                 var hasOne = false;
 
                 for (var key in allPics) {
@@ -175,6 +177,7 @@
     };
 
     contextGlobal.GMaps = GMaps;
+
 
 }(window));
 

@@ -13,7 +13,7 @@
 
                 var columns = ["#leftPanels", "#rightPanels"];
                 var index = 0;
-                console.log(responseArray);
+                console.log(responseArray.data);
                 for (var responseKey in responseArray.data) {
                     timeLine = new TimeLine(columns[index % 2], responseArray.data[responseKey]);
                     index++;
