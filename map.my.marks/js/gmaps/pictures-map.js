@@ -4,6 +4,8 @@
     var GMaps = function (fbPicturesList) {
         this.fbPicturesList = fbPicturesList;
 
+        var currentObject = this;
+
         //push to firebase;
         for (var pictureKey in this.fbPicturesList.data) {
             var picture = this.fbPicturesList.data[pictureKey];
@@ -64,7 +66,18 @@
 
             for (var pictureKey in this.fbPicturesList.data) {
                 var picture = this.fbPicturesList.data[pictureKey];
-                if (picture.place !== undefined) {
+
+                var toSearch = $("#srch-term").val();
+
+                var toIgnore = true;
+                console.log(toSearch);
+                if (toSearch.length > 0) {
+                    if (picture.from.name.indexOf(toSearch) > -1) {
+                        toIgnore = false;
+                    }
+                }
+
+                if (picture.place !== undefined && !toIgnore) {
                     var newMarker = new google.maps.Marker({
                         position: new google.maps.LatLng(picture.place.location.latitude, picture.place.location.longitude),
                         title: picture.name,
@@ -119,32 +132,40 @@
                 hideShowMap();
             });
 
+            $("#srch-term").change(function () {
+                currentObject.bringFromFireBase();
+            });
+
         };
 
         var currentObject = this;
 
         //bring all from firebase
 
-        firebase.once('value', function (data) {
+        this.bringFromFireBase = function () {
+            firebase.once('value', function (data) {
 
-            var allPics = data.val();
-            currentObject.fbPicturesList.data = [];
+                var allPics = data.val();
+                currentObject.fbPicturesList.data = [];
 
-            console.log(allPics);
-            var hasOne = false;
+                console.log(allPics);
+                var hasOne = false;
 
-            for (var key in allPics) {
-                hasOne = true;
+                for (var key in allPics) {
+                    hasOne = true;
 
-                var picWr = allPics[key];
-                currentObject.fbPicturesList.data.push(picWr.data);
+                    var picWr = allPics[key];
+                    currentObject.fbPicturesList.data.push(picWr.data);
 
-            }
-            if (hasOne) {
-                currentObject.initMap();
-            }
+                }
+                if (hasOne) {
+                    currentObject.initMap();
+                }
 
-        });
+            });
+        };
+
+        this.bringFromFireBase();
 
         this.initMap();
     };
