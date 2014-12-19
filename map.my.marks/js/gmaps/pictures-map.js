@@ -75,6 +75,8 @@
                     if (picture.from.name.indexOf(toSearch) > -1) {
                         toIgnore = false;
                     }
+                } else {
+                    toIgnore = false;
                 }
 
                 if (picture.place !== undefined && !toIgnore) {
