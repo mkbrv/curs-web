@@ -48,6 +48,7 @@
                     var infowindow = new google.maps.InfoWindow({
                         map: map,
                         position: pos,
+
                         content: 'Location found using HTML5.'
                     });
 
@@ -70,7 +71,7 @@
                 var toSearch = $("#srch-term").val();
 
                 var toIgnore = true;
-                console.log(toSearch);
+
                 if (toSearch.length > 0) {
                     if (picture.from.name.indexOf(toSearch) > -1) {
                         toIgnore = false;
@@ -136,6 +137,7 @@
 
             $("#srch-term").change(function () {
                 currentObject.bringFromFireBase();
+                console.log("searching: " + $(this).val());
             });
 
         };
