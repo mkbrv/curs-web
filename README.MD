@@ -1,39 +1,24 @@
-Csere Miklos
-
-curs-web 2014, unitbv an II
-
-
-Proiect final
-single-page app: redirectare (rutare / filtrare)
-login
-friends_list (with search)
-facebook   - permissions
-					 - get friends
-get locations
-- google maps
-single-page app: redirectare (rutare / filtrare)
-login
-friends_list (with search)
-facebook   - permissions
-					 - get friends
-get locations
-- google maps
-
-            console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me?accessToken=' + this.accessToken, function (response) {
-                document.getElementById('content').innerHTML =
-                    'Thanks for logging in, ' + response + '!';
-                currentObject.currentUser = response;
-            });
-
-            FB.api('/me/photos?accessToken=' + this.accessToken, function (response) {
-                console.log(response);
-            });
+#  WEB-1.0
+## Csere Miklos
 
 
-                FB.api('/me/feed?message="I love bacon"&accessToken=' + this.accessToken,'post', function (response) {
-                    console.log(response);
-                });
+*Transylvania University of Brașov, Computer Science year II.*
 
-                https://developers.facebook.com/docs/graph-api/reference
+Structure: 10 weeks, containing:
 
+1.  What is the WEB? HTTP. GIT.
+2.  HTML/CSS
+3.  CSS3
+4.  Twitter Bootstrap
+5.  Web security (OWASP)
+6.  Javascript (namespace / modules / prototype)
+7.  jQuery
+8.  jQuery Plugin, Plugin creation, Plugin usage
+9.  Facebook API
+10. GMaps API
+
+Subscribed: 65
+Evenly split in 2 groups: Thursday afternoon, Friday morning
+
+Maximum attendance: 65 / week.
+Minimum attendace:  38 / week.
